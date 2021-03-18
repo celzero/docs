@@ -1,7 +1,7 @@
 ---
 id: introduction
 title: Rethink DNS + Firewall
-sidebar_label: Rethink
+sidebar_label: Welcome
 slug: /
 ---
 
