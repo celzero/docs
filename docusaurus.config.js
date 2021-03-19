@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'RethinkDNS',
+  title: 'RethinkDNS Docs',
   tagline: 'A fast, secure, configurable, private DNS + Firewall for Android.',
   url: 'https://docs.rethinkdns.com',
   baseUrl: '/',
@@ -14,7 +14,8 @@ module.exports = {
       title: 'Docs',
       logo: {
         alt: 'Logo icon',
-        src: 'img/android-icon-192x192.png',
+        src: 'img/app_icon.svg',
+        srcDark: 'img/app_icon_Light.svg',
       },
       items: [
         // {
