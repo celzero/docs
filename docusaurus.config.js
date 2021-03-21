@@ -38,52 +38,65 @@ module.exports = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'Logo icon',
+        src: 'img/app_icon_Light.svg',
+        href: 'https://rethinkdns.com',
+      },
       links: [
-        // {
-        //   title: 'Docs',
-        //   items: [
-        //     {
-        //       label: 'Style Guide',
-        //       to: 'docs/',
-        //     },
-        //     {
-        //       label: 'Second Doc',
-        //       to: 'docs/doc2/',
-        //     },
-        //   ],
-        // },
+        {
+          title: 'Product',
+          items: [
+            {
+              label: 'RethinkDNS',
+              to: 'https://rethinkdns.com',
+            },
+            {
+              label: 'Downloads',
+              to: 'https://rethinkdns.com/downloads',
+            },
+            {
+              label: 'Documentation',
+              to: '/',
+            },
+          ],
+        },
+        {
+          title: 'Company',
+          items: [
+            {
+              label: 'FAQs',
+              href: 'https://rethinkdns.com/faq'
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/celzero/',
+            },
+            {
+              label: 'Roadmap',
+              href: 'https://github.com/celzero/rethink-app/milestones'
+            }
+          ],
+        },
         {
           title: 'Community',
           items: [
-            // {
-            //   label: 'Stack Overflow',
-            //   href: '',
-            // },
-            // {
-            //   label: 'Discord',
-            //   href: '',
-            // },
+            {
+              label: 'Blog',
+              href: 'https://blog.rethinkdns.com',
+            },
             {
               label: 'Twitter',
               href: 'https://twitter.com/rethinkdns',
             },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
             {
-              label: 'Blog',
-              to: 'https://blog.rethinkdns.com',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/celzero/docs',
+              label: 'Telegram',
+              href: 'https://t.me/rethinkdns'
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} RethinkDNS + Firewall. Built with Docusaurus.`,
+      copyright: `${new Date().getFullYear()} Celzero. Built with Docusaurus.`,
     },
   },
   presets: [
