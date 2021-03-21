@@ -4,7 +4,7 @@ title: Rethink DNS
 slug: /dns
 ---
 
-Rethink**DNS** is DNS Resolver Service with custom rules and blocklists.
+Rethink**DNS** is [DNS Resolver](https://www.cloudflare.com/learning/dns/what-is-dns/) Service with custom rules and blocklists. A DNS resolver is an address book of the internet-- it helps locate IP addresses of the servers given a domain name. For example, dns.google.com (a domain name) is located at 8.8.8.8 (IP address). This mapping is retrieved by a DNS resolver.
 
 You can configure Rethink**DNS** in the companion [firewall app](firewall) or even in your own device / internet browser that supports [Secure DNS](https://wikipedia.org/wiki/DNS_over_HTTPS) (aka DNS over HTTPS). See below on [how to configure](#how-to)
 
