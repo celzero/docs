@@ -9,3 +9,5 @@ RethinkDNS comes with a companion [**Firewall**](https://en.wikipedia.org/wiki/F
 RethinkDNS Firewall when configured [DNS](dns), you can analyse DNS requests in real-time and read through aggregated reports in the App logs. And it also helps evade Internet censorship as enforced in most countries.
 
 Goto [rethinkDNS.com](https://rethinkdns.com/) to download.
+
+on [play store](https://play.google.com/store/apps/details?id=com.celzero.bravedns) to install.
