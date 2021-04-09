@@ -1,42 +1,35 @@
---
-title: Rethink DNS + Orbot
-# sidebar_label: Configuration
-slug: /orbot
+---
+title: Orbot Integration
 ---
 
-RethinkDNS comes with an option to configure Orbot (tor) to be used along with the Rethink DNS as a Proxy server for changing the IP address
+RethinkDNS comes with an option to configure Orbot (Tor) to be used along with the RethinkDNS as a Proxy server to change the IP address.
 
-**Configurations Setps: (Manul Way)**
+## Configurations Steps
 
-1. Start Orbot (do not start it in the VPN mode).
+### Manual Method
 
-2. Notice what Orbot says against "SOCKS5" and "HTTP" fields on its homescreen. Those are port numbers.
-
-3. Enter the RethinkDNS app, Start it, goto Settings.
-
-4. Enable HTTP Proxy and enter the HTTP port number (as seen in Orbot) if you want just the browsers to use Orbot's Tor bridge.
-
+1. Start _Orbot_ (do not start it in the VPN mode).
+2. Notice what Orbot says against "SOCKS5" and "HTTP" fields on its home-screen. Those are port numbers.
+3. Open the RethinkDNS app; Start it and goto _Settings_.
+4. Enable HTTP Proxy and enter the HTTP port number (as seen in Orbot), if you want just the browsers to use Orbot's Tor bridge.
 5. Enable SOCKS5 (TCP) Proxy and enter the port number (from step 2), choose App (as Orbot), optionally enable Block all UDP traffic except DNS to stop leaking UDP (WhatsApp calls, Zoom, Chromecast may stop working; Orbot doesn't support UDP).
-
 6. Note: The IP address field to be set in RethinkDNS is 127.0.0.1 for both those proxies (for Orbot).
+7. Visit [dnsleaktest.com](https://dnsleaktest.com/). It shouldn't be able to tell where you're from and not be able to show your actual IP.
 
-7. Visit dnsleaktest.com. It shouldn't be able to tell where you're from and not be able to show your actual IP.
+### Automatic Method
 
-**Strating from Version 0.53C we have introduced one click setup: (Auto Way)**
+Starting from Version 0.53c, we have introduced one click setup
 
-1. To use that Open Rethink DNS app and go to Settings Tab by clicking Gear Icon in bottom menu.
-        
-        ![image](https://user-images.githubusercontent.com/75526985/113891733-efc03700-97f7-11eb-880c-d14551cd75ca.png)
+1. To use that Open RethinkDNS app and go to Settings Tab by clicking Gear Icon at the bottom menu.
 
+  ![image](https://user-images.githubusercontent.com/75526985/113891733-efc03700-97f7-11eb-880c-d14551cd75ca.png)
 
-2. in settings tab you will find Setup Orbot at last of VPN & PROXY section.
+2. In settings, you will find _Setup Orbot_ in _VPN & Proxy_ section, click on it.
 
-         ![image](https://user-images.githubusercontent.com/75526985/113891821-049cca80-97f8-11eb-982f-9d49c96bcfbc.png)
+  ![image](https://user-images.githubusercontent.com/75526985/113891821-049cca80-97f8-11eb-982f-9d49c96bcfbc.png)
 
+3. Now, you will be presented with a drawer at bottom, where you will find options to setup Orbot as per your liking (HTTP Proxy, TCP-Only Proxy, TCP + HTTP Proxy and None).
 
-3. click on that option will be presented with a new page where you will find options to setup orbot as per your liking (HTTP PROXY, TCP-Only Proxy, TCP + HTTP Proxy and None).
+  ![image](https://user-images.githubusercontent.com/75526985/113891926-1aaa8b00-97f8-11eb-8f8c-c484ea7103d7.png)
 
-          ![image](https://user-images.githubusercontent.com/75526985/113891926-1aaa8b00-97f8-11eb-8f8c-c484ea7103d7.png)
-
-
-4. select the one you like and hit on the orbot icon at top to open orbot app and then start orbot (tor network) once you see 100% you are good to go.
+4. Select the one you like and click on the Orbot icon at top of the drawer to open Orbot app and then start Orbot (tor network). Once you see 100% you are good to go.
