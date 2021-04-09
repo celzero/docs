@@ -7,12 +7,14 @@ module.exports = {
     //   label: 'DNS',
     //   items: ['dns/introduction'],
     // },
-    'firewall/introduction'
-    // {
-    //   type: 'category',
-    //   label: 'Firewall',
-    //   items: ['firewall/introduction'],
-    // }
+    {
+      type: 'category',
+      label: 'Firewall',
+      items: [
+        'firewall/introduction',
+        'firewall/orbot',
+      ],
+    },
   ],
   someSidebar: {
     // Features: ['mdx'],
