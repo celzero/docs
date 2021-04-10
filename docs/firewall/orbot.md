@@ -22,14 +22,14 @@ Starting from Version 0.53c, we have introduced one click setup
 
 1. To use that Open RethinkDNS app and go to Settings Tab by clicking Gear Icon at the bottom menu.
 
-  ![image](https://user-images.githubusercontent.com/75526985/113891733-efc03700-97f7-11eb-880c-d14551cd75ca.png)
+  <img src="https://user-images.githubusercontent.com/75526985/113891733-efc03700-97f7-11eb-880c-d14551cd75ca.png" width="480" />
 
 2. In settings, you will find _Setup Orbot_ in _VPN & Proxy_ section, click on it.
 
-  ![image](https://user-images.githubusercontent.com/75526985/113891821-049cca80-97f8-11eb-982f-9d49c96bcfbc.png)
+  <img src="https://user-images.githubusercontent.com/75526985/113891821-049cca80-97f8-11eb-982f-9d49c96bcfbc.png" width="480" />
 
 3. Now, you will be presented with a drawer at bottom, where you will find options to setup Orbot as per your liking (HTTP Proxy, TCP-Only Proxy, TCP + HTTP Proxy and None).
 
-  ![image](https://user-images.githubusercontent.com/75526985/113891926-1aaa8b00-97f8-11eb-8f8c-c484ea7103d7.png)
+  <img src="https://user-images.githubusercontent.com/75526985/113891926-1aaa8b00-97f8-11eb-8f8c-c484ea7103d7.png" width="480" />
 
 4. Select the one you like and click on the Orbot icon at top of the drawer to open Orbot app and then start Orbot (tor network). Once you see 100% you are good to go.
