@@ -9,6 +9,9 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'celzero', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
+  plugins: [
+    require.resolve('docusaurus-lunr-search'),
+  ],
   themeConfig: {
     navbar: {
       title: 'Docs',
