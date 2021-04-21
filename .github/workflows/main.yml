@@ -35,11 +35,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Change baseUrl to `/docs/` in docusaurus config before building & deploying
+      # Change baseUrl from '/' to '/docs/' in docusaurus config file
       - run: sed -i "s#baseUrl:\\ '\/',#baseUrl:\\ '\/docs\/',#g" docusaurus.config.js
 
+      # Build
       - run: npm ci
       - run: npm run build --if-present
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
