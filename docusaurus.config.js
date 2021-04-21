@@ -52,6 +52,10 @@ module.exports = {
               to: 'https://rethinkdns.com',
             },
             {
+              label: 'Firewall App',
+              to: 'https://rethinkdns.com/app',
+            },
+            {
               label: 'Downloads',
               to: 'https://rethinkdns.com/downloads',
             },
@@ -62,7 +66,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Company',
+          title: 'About',
           items: [
             {
               label: 'FAQs',
@@ -75,7 +79,11 @@ module.exports = {
             {
               label: 'Roadmap',
               href: 'https://github.com/celzero/rethink-app/milestones'
-            }
+            },
+            {
+              label: 'Privacy',
+              href: 'https://rethinkdns.com/privacy'
+            },
           ],
         },
         {
