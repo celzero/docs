@@ -1,5 +1,4 @@
 # This workflow helps in previewing changes on forks
-
 name: CD gh-pages
 
 # Controls when the action will run.
@@ -18,33 +17,32 @@ jobs:
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
+    env:
+      NODE_VERSION: 14
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: 🧰 Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ env.NODE_VERSION }}
 
       # Change baseUrl from '/' to '/docs/' in docusaurus config file
-      - name: Configure baseUrl
+      - name: 🔧 Configure baseUrl
         run: sed -i "s#baseUrl:\\ '\/',#baseUrl:\\ '\/docs\/',#g" docusaurus.config.js
 
       # Build
-      - name: Build
+      - name: 🏗️ Build
         run: |
           npm ci
           npm run build --if-present
 
-      - name: Deploy
+      - name: 🚀 Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
