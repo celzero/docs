@@ -11,19 +11,19 @@ module.exports = {
   projectName: 'docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Docs',
+      title: 'RethinkDNS',
       logo: {
         alt: 'Logo icon',
         src: 'img/app_icon.svg',
         srcDark: 'img/app_icon_Light.svg',
       },
       items: [
-        // {
-        //   to: 'docs/',
-        //   activeBasePath: 'docs',
-        //   label: 'Docs',
-        //   position: 'left',
-        // },
+        {
+          to: '/',
+          activeBasePath: 'docs',
+          label: 'Docs',
+          position: 'left',
+        },
         // { 
         //   to: 'blog',
         //   label: 'Blog',
