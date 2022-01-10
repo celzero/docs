@@ -52,12 +52,12 @@ This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and sup
 
 1. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (You will need a GitHub account).
 2. In your fork, click on the _Actions_ tab and Confirm that you want to use Actions, if asked.
-3. Click on "🦕 Deno deploy" on the left pane. Click on the "Run workflow" dropdown on the right side, and run the workflow using the <kbd>Run workflow</kbd> button.
+3. Click on "🦕 Deno" on the left pane. Click on the "Run workflow" dropdown on the right side. In this dropdown, type "Deployment type" as "live" instead of "dev". Then run the workflow using the <kbd>Run workflow</kbd> button.
 4. Now, navigate to [deno.com/deploy](https://deno.com/deploy) and Sign Up for an account.
 5. Create a new project in [deno deploy dash](https://dash.deno.com). Name it appropriately.
 6. Click on "Continue" button under "Deploy from GitHub" and proceed to install the GitHub app on your GitHub Account. Make sure you give access the fork repository you had made in step 1.
-7. Now, head back the deno dash and select the repository as the fork you had made in step 1, for integration. Select branch as "build/deno-deploy/dev", and select the file as "http.bundle.js".
-8. Open deno dash and select the project, navigate to Settings -> Environment variables (`https://dash.deno.com/projects/<project-name>/settings/envs`). Add the essential environment variables as described in [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file as `key = "value"` pairs. Values of the required variables can be inferred from [`wrangler.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/wrangler.toml) and/or [`fly.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/fly.toml) files.
+7. Now, head back the deno dash and select the repository as the fork you had made in step 1, for integration. Select branch as "build/deno-deploy/live", and select the file as "index.bundle.js".
+8. Open deno dash and select the project, navigate to Settings -> Environment variables (`https://dash.deno.com/projects/<project-name>/settings/envs`). Add the essential environment variables as described in [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file as `key = "value"` pairs. If values are empty (`""`) for required variables, they can be found in [`wrangler.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/wrangler.toml) and/or [`fly.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/fly.toml) files.
 9. Done. Now your DoH resolver should be available on `https://<name>.deno.dev`, where `<name>` is the name of the project you had created on step 5.
 
 ### Using Fly.io {#fly-io}
