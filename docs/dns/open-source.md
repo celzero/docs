@@ -57,8 +57,9 @@ This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and sup
 5. Now, head back the deno.com dashboard and select your fork to which you just opened up access to. Type in `main` as the _production branch_, and choose _GitHub Action_ as the _deployment mode_.
 6. From the dashboard again, for this project, navigate to Settings -> Environment variables (`https://dash.deno.com/projects/<project-name>/settings/envs`). Set environment variables as appropriate for your use-case (refer [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file as `key = "value"` pairs, example key/value env in [`wrangler.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/wrangler.toml) and/or [`fly.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/fly.toml) files).
 7. Back on GitHub, from your forked repository, click on the _Actions_ tab and _Confirm_ that you want to use _Actions_, if prompted.
-8. Select "🦕 Deno" from left-nav. Then, click on the "Run workflow" dropdown that appears on the top-right corner. Tap _Run_ to run it with preset defaults.
-9. If the workflow run succeeds, the RethinkDNS DoH resolver should be up and running on `https://<name>.deno.dev`, where `<name>` is the name of the project as set in _Step 3_. If not, [reach out to us over on GitHub](https://github.com/serverless-dns/serverless-dns/discussions).
+8. On GitHub, navigate to the repository's _Settings_ (top nav), and tap on _Secrets_ (left nav). Click the _New repository secret_ button, and fill-in _Name_ with `DENO_PROJECT_NAME` and _Value_ with the name of your deno.com project as set in _Step 3_.
+9. Select "🦕 Deno" from left-nav. Then, click on the "Run workflow" dropdown that appears on the top-right corner. Tap _Run_ to run it with preset defaults.
+10. If the workflow run succeeds, the RethinkDNS DoH resolver should be up and running on `https://<name>.deno.dev`, where `<name>` is the name of the project as set in _Step 3_. If not, [reach out to us over on GitHub](https://github.com/serverless-dns/serverless-dns/discussions).
 
 ### Using Fly.io {#fly-io}
 
