@@ -65,17 +65,17 @@ This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and sup
 
 This project can be hosted on [fly.io](https://fly.io), and can support both DoT and DoH protocols. User will be liable for fly.io billing.
 
-1. Install `flyctl` on your device. Please [refer to fly.io docs](https://fly.io/docs/getting-started/installing-flyctl/) for the same.
-2. Signup or Login to fly.io. Please [refer to fly.io docs](https://fly.io/docs/getting-started/login-to-fly/) for the same.
+1. Install `flyctl` on your device ([ref](https://fly.io/docs/getting-started/installing-flyctl/)).
+2. Signup and/or login to fly.io ([ref](https://fly.io/docs/getting-started/login-to-fly/)).
 3. Create an empty directory anywhere on your PC. Open you terminal or powershell and navigate to this directory.
 4. Launch a fly app
 	```bash
 	flyctl launch
 	```
 	- Choose a unique name here or let it auto-generate.
-	- Choose a location (closest to you would be better for you to use).
+	- Choose a location (the closer to your users, the better).
 	- Note down the name of the app and you may delete this directory along with the generated `fly.toml`.
-5. Now, you would need a SSL or TLS certificate for your domain name. Both getting a domain name and CA certificate generation are beyond the scope of this README.
+5. Now, you would need a SSL or TLS certificate for your domain name. Both getting a domain name and CA certificate generation are beyond the scope of this README. [_Let's Encrypt_](https://certbot.eff.org/) and [_ZeroSSL_](https://www.frankindev.com/2021/10/14/free-wildcard-ssl-by-zerossl-with-acme.sh/) vend public certs for free, valid for a maximum of 90 days.
 6. Once you have your CA certificate and key files, you need to encode them as base64 with no wrapping. How this can be done in bash terminal is shown below.
 	```bash
 	# Locate your CA certificate & key files
@@ -97,18 +97,18 @@ This project can be hosted on [fly.io](https://fly.io), and can support both DoT
 	```
 	- Upload this to fly secrets like so in terminal or powershell:
 		```bash
-		fly secrets set TLS_=- < FLY_TLS -a app-id
+		fly secrets set TLS_CERTKEY=- < FLY_TLS -a <app-id>
 		```
-		where "app-id" is the name of the fly app you had launched in step 4.
+		where `<app-id>` is the name of the fly app you had launched in step 4.
 	- Other essential environment variables are already present in [`fly.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/fly.toml) file of this repository, but you may read [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) for it's use case and configuration.
-8. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (You will need a GitHub account).
+8. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (you will need a GitHub account).
 9. In your fork, click on the _Actions_ tab and Confirm that you want to use Actions, if asked.
 10. Similarly, click on _Settings_ tab and select _Secrets_ on the left pane. Add a new GitHub secret called **FLY_APP_NAME** and set it's value as the name of the fly app you had launched in step 4. And add another secret called **FLY_API_TOKEN** and set's value as what you get from running `flyctl auth token` in terminal or powershell.
-11. Head back to _Actions_ tab and click on "🪰 Fly" on the left pane. Click on the "Run workflow" dropdown on the right side, and run the workflow using the <kbd>Run workflow</kbd> button.
+11. Head back to _Actions_ tab and click on _Fly_ on the left pane. Click on the _Run workflow_ dropdown on the right side, and run the workflow using the <kbd>Run workflow</kbd> button.
 12. Once this action workflow finishes, open the terminal or powershell again and type in:
 	```bash
-	flyctl ips list -a app-id
+	flyctl ips list -a <app-id>
 	```
-	where "app-id" is the name of the fly app you had launched in step 4.
+	where `<app-id>` is the name of the fly app you had launched in step 4.
 	- Here, you can get the IP address of the application, update the DNS records of your domain name you had used in step 5.
 13. Done. Your application should be available on the said domain name in a few minutes. To configure, say, to change the upstream resolver, you can edit the environment variables on `fly.toml` file of your fork and re-run the Action workflow.
