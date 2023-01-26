@@ -39,7 +39,6 @@ jobs:
         run: |
           sed -i "s#baseUrl: '/',#baseUrl: '/docs/',#g" docusaurus.config.js
 
-      # Build
       - name: 🏗️ Build
         run: |
           npm ci
