@@ -36,7 +36,8 @@ jobs:
 
       # Change baseUrl from '/' to '/docs/' in docusaurus config file
       - name: 🔧 Configure baseUrl
-        run: sed -i "s#baseUrl:\\ '\/',#baseUrl:\\ '\/docs\/',#g" docusaurus.config.js
+        run: |
+          sed -i "s#baseUrl: '/',#baseUrl: '/docs/',#g" docusaurus.config.js
 
       # Build
       - name: 🏗️ Build
