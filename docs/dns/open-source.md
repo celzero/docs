@@ -44,7 +44,7 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 		- if your new DOH resolver url is `example.dns.resolver.com/dns-query/resolve`
 		- change below variables and click on save button
 			`CF_DNS_RESOLVER_URL = example.dns.resolver.com/dns-query/resolve`
-                - alternatively, you can modify your CF_DNS_RESOLVER_URL in your forked serverless-dns repo. Head to src/core/env.js and modify either your CF_DNS_RESOLVER_URL or CF_DNS_RESOLVER_URL_2 server
+                - alternatively, you can modify your `CF_DNS_RESOLVER_URL` in your forked serverless-dns repo. Head to src/core/env.js and modify either your `CF_DNS_RESOLVER_URL or CF_DNS_RESOLVER_URL_2` server
 
 
 ### Using Deno-Deploy {#deno-deploy}
