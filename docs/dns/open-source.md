@@ -12,7 +12,7 @@ This serverless DNS can be hosted to three platforms: Cloudflare, Deno-Deploy an
 | ------------- | ---------- | ----------------- | --------------------------------- |
 | ⛅ Cloudflare  | Easy       | HTTPS             | [Read Instructions](#cloudflare)  |
 | 🦕 Deno Deploy | Moderate   | HTTPS             | [Read Instructions](#deno-deploy) |
-| 🪰 Fly         | Hard       | TLS & HTTPS       | [Read Instructions](#fly-io)      |
+| 🪂 Fly         | Hard       | TLS & HTTPS       | [Read Instructions](#fly-io)      |
 
 ### Using Cloudflare {#cloudflare}
 
@@ -24,8 +24,8 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 	- Once the hosting is successful, lets consider rethink serverless dns is hosted
 		to `example.com`.
 	- To configure your dns level blocking visit to `example.com/configure` which
-		will take to configuration page, which currently contains 171 blocklists with
-		5 Million too block domains in category like notracking, dating, gambling,
+		will take to configuration page, which currently contains 191 blocklists with
+		5 Million blockable domains in category like notracking, dating, gambling,
 		privacy, porn, cryptojacking, security ...
 	- Navigate through and select your blocklists.
 	- Once selected you can find your domain name `example.com` followed by
@@ -44,6 +44,7 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 		- if your new DOH resolver url is `example.dns.resolver.com/dns-query/resolve`
 		- change below variables and click on save button
 			`CF_DNS_RESOLVER_URL = example.dns.resolver.com/dns-query/resolve`
+                - alternatively, you can modify your CF_DNS_RESOLVER_URL in your forked serverless-dns repo. Head to src/core/env.js and modify either your CF_DNS_RESOLVER_URL or CF_DNS_RESOLVER_URL_2 server
 
 
 ### Using Deno-Deploy {#deno-deploy}
