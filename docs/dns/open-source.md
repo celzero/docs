@@ -25,7 +25,7 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 		to `example.com`.
 	- To configure your dns level blocking visit to `example.com/configure` which
 		will take to configuration page, which currently contains 191 blocklists with
-		5 Million blockable domains in category like notracking, dating, gambling,
+		~13 Million blockable domains in category like notracking, dating, gambling,
 		privacy, porn, cryptojacking, security ...
 	- Navigate through and select your blocklists.
 	- Once selected you can find your domain name `example.com` followed by
