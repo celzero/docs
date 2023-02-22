@@ -34,11 +34,13 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      # Since github pages deploys to https://celzero.github.io/docs/ for a repo
+      # named `docs` owned by `celzero`.
       # Change baseUrl from '/' to '/docs/' in docusaurus config file
       - name: 🔧 Configure baseUrl
-        run: sed -i "s#baseUrl:\\ '\/',#baseUrl:\\ '\/docs\/',#g" docusaurus.config.js
+        run: |
+          sed -i "s#baseUrl: '/',#baseUrl: '/docs/',#g" docusaurus.config.js
 
-      # Build
       - name: 🏗️ Build
         run: |
           npm ci
