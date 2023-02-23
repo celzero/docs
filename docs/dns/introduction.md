@@ -8,7 +8,7 @@ Rethink**DNS** is [DNS Resolver](https://www.cloudflare.com/learning/dns/what-is
 
 You can configure Rethink**DNS** in the companion [firewall app](firewall) or even in your own device / internet browser that supports [Secure DNS](https://wikipedia.org/wiki/DNS_over_HTTPS) (aka DNS over HTTPS). See below on [how to configure](#how-to).
 
-RethinkDNS is private, secure, and fast DNS resolver and has 170+ pre-defined blacklists for you to configure.
+RethinkDNS is private, secure, and fast DNS resolver and has 190+ pre-defined blacklists for you to configure.
 
 With our paid plans (coming soon), you'll also be able to define your own custom blocklists that can be configured with Rethink**DNS**. The paid plan will also allow you to store you dns logs and view analytics, all in the cloud. You will be able to analyse your DNS requests and read through aggregated reports.
 
