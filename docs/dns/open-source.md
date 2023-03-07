@@ -16,7 +16,7 @@ This serverless DNS can be hosted to three platforms: Cloudflare, Deno-Deploy an
 
 ### Using Cloudflare {#cloudflare}
 
-Rethink serverless can be hosted to cloudflare. User will be liable for cloudflare billing. Click the below button to deploy.
+Rethink serverless can be hosted to cloudflare. User will be liable for cloudflare billing. Click the button below to deploy.
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/serverless-dns/serverless-dns/)
 
@@ -44,7 +44,7 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 		- if your new DOH resolver url is `example.dns.resolver.com/dns-query/resolve`
 		- change below variables and click on save button
 			`CF_DNS_RESOLVER_URL = example.dns.resolver.com/dns-query/resolve`
-       - alternatively, you can modify your `CF_DNS_RESOLVER_URL` in your forked serverless-dns repo. Head to src/core/env.js and modify either your `CF_DNS_RESOLVER_URL` or `CF_DNS_RESOLVER_URL_2` server
+       - alternatively, you can modify your `CF_DNS_RESOLVER_URL` in your forked serverless-dns repo. Head to src/core/env.js and modify either your `CF_DNS_RESOLVER_URL` or `CF_DNS_RESOLVER_URL_2` DNS server
 
 
 
@@ -113,4 +113,4 @@ This project can be hosted on [fly.io](https://fly.io), and can support both DoT
 	```
 	where `<app-id>` is the name of the fly app you had launched in step 4.
 	- Here, you can get the IP address of the application, update the DNS records of your domain name you had used in step 5.
-13. Done. Your application should be available on the said domain name in a few minutes. To configure, say, to change the upstream resolver, you can edit the environment variables on `fly.toml` file of your fork and re-run the Action workflow.
+13. Done. Your application should be available on the said domain name in a few minutes. To configure, for example, the upstream resolver, you can edit the environment variables in the `fly.toml` file of your fork and re-run the Action workflow.
