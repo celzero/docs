@@ -14,4 +14,4 @@ You would be able to set rules such as, _block apps by category_, _block when ap
 
 RethinkDNS Firewall when configured [DNS](dns), you can analyse DNS requests in real-time and read through aggregated reports in the App logs. And it also helps evade Internet censorship as enforced in most countries.
 
-Goto [rethinkDNS.com](https://rethinkdns.com/) to download.
+Goto [RethinkDNS.com](https://rethinkdns.com/) to download.
