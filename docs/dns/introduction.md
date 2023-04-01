@@ -16,7 +16,7 @@ RethinkDNS is highly-available with servers in over 200+ locations across the gl
 
 ## How To Configure DNS {#how-to}
 
-A custom DNS resolver can be configured here: [rethinkdns.com/configure](https://www.rethinkdns.com/configure). This will give a DNS resolver address that looks something like `https://basic.bravedns.com/1:YASAAQBwIAA=` according to blocklists or rules that you selected. This address can then be used as your DNS resolver in your device or browser.
+A custom DNS resolver can be configured here: [rethinkdns.com/configure](https://www.rethinkdns.com/configure). This will give a DNS resolver address that looks something like `https://basic.bravedns.com/1:YASAAQBwIAA=` according to blocklists or rules that you selected. This address can then be used as your DNS resolver in your device or browser. If you already have a DNS link and you want to reconfigure, just paste the link in the search bar of the configue page, and you're good to go.
 
 ### Configure blocklists on the Companion Firewall App
 
