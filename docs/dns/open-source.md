@@ -52,10 +52,10 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 
 This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and supports DoH only. User will be liable for deno.com billing.
 
-1. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (requries a GitHub account).
+1. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (requires a GitHub account).
 2. Now, navigate to [deno.com/deploy](https://deno.com/deploy) and _Sign Up_ for an account.
 3. Create a new project via the [deno dashboard](https://dash.deno.com). Name the project as you wish.
-4. Click on the _Continue_ button under _Deploy from GitHub_ and proceed to install the GitHub app to your GitHub Account. This is important: From your GitHub acction, make sure to give _deno.com_ requisite permission to access your fork (created in _Step 1_).
+4. Click on the _Continue_ button under _Deploy from GitHub_ and proceed to install the GitHub app to your GitHub Account. This is important: From your GitHub action, make sure to give _deno.com_ requisite permission to access your fork (created in _Step 1_).
 5. Now, head back the deno.com dashboard and select your fork to which you just opened up access to. Type in `main` as the _production branch_, and choose _GitHub Action_ as the _deployment mode_.
 6. From the dashboard again, for this project, navigate to Settings -> Environment variables (`https://dash.deno.com/projects/<project-name>/settings/envs`). Set environment variables as appropriate for your use-case (refer [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file as `key = "value"` pairs, example key/value env in [`wrangler.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/wrangler.toml) and/or [`fly.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/fly.toml) files).
 7. Back on GitHub, from your forked repository, click on the _Actions_ tab and _Confirm_ that you want to use _Actions_, if prompted.
