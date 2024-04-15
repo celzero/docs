@@ -53,15 +53,14 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and supports DoH only. User will be liable for deno.com billing.
 
 1. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (requires a GitHub account).
-2. Now, navigate to [deno.com/deploy](https://deno.com/deploy) and _Sign Up_ for an account.
-3. Create a new project via the [deno dashboard](https://dash.deno.com). Name the project as you wish.
-4. Click on the _Continue_ button under _Deploy from GitHub_ and proceed to install the GitHub app to your GitHub Account. This is important: From your GitHub action, make sure to give _deno.com_ requisite permission to access your fork (created in _Step 1_).
-5. Now, head back the deno.com dashboard and select your fork to which you just opened up access to. Type in `main` as the _production branch_, and choose _GitHub Action_ as the _deployment mode_.
-6. From the dashboard again, for this project, navigate to Settings -> Environment variables (`https://dash.deno.com/projects/<project-name>/settings/envs`). Set environment variables as appropriate for your use-case (refer [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file as `key = "value"` pairs, example key/value env in [`wrangler.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/wrangler.toml) and/or [`fly.toml`](https://github.com/serverless-dns/serverless-dns/blob/main/fly.toml) files).
-7. Back on GitHub, from your forked repository, click on the _Actions_ tab and _Confirm_ that you want to use _Actions_, if prompted.
-8. On GitHub, navigate to the repository's _Settings_ (top nav), and tap on _Secrets_ (left nav). Click the _New repository secret_ button, and fill-in _Name_ with `DENO_PROJECT_NAME` and _Value_ with the name of your deno.com project as set in _Step 3_.
-9. Select "🦕 Deno" from left-nav. Then, click on the "Run workflow" dropdown that appears on the top-right corner. Tap _Run_ to run it with preset defaults.
-10. If the workflow run succeeds, the RethinkDNS DoH resolver should be up and running on `https://<name>.deno.dev`, where `<name>` is the name of the project as set in _Step 3_. If not, [reach out to us over on GitHub](https://github.com/serverless-dns/serverless-dns/discussions).
+2. In the repository you just forked, click on the _Actions_ tab and _Confirm_ that you want to use _Actions_, if prompted.
+3. Now, navigate to [deno.com/deploy](https://deno.com/deploy) and _Sign Up_ for an account.
+4. Create a new project via the [deno dashboard](https://dash.deno.com) by just clicking on the `New Project` button.
+5. Select your forked repository from the list of repositories that appear. If your GitHub username does not show up, click on `+ Add GitHub Account` and install the `Deno Deploy` GitHub App with the necessary permissions.
+6. Once you select your forked repository, input boxes for project configuration show up. You need to do two things here; enter `deno task prepare` in the `Build Step`, and select `src/server-deno.ts` in `Entrypoint` field.
+7. Click on the `Deploy Project` button.
+8. Once your project is successfully deployed, you will see "Success!" page with a URL to your deployment that looks like `https://<project-name>.deno.dev`. If you found any issues, [reach out to us over on GitHub](https://github.com/serverless-dns/serverless-dns/discussions).
+9. Optionally, if you need to configure environment variables, you can do so in the project settings page that you can access either by clicking on the `Add environment variables` link shown in the "Success!" page, or by navigating to `https://dash.deno.com/projects/<project-name>/settings#environment-variables`.
 
 ### Using Fly.io {#fly-io}
 
