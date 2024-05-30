@@ -1,4 +1,8 @@
-## Adding a WireGuard Configuration to Rethink DNS + Firewall + VPN App
+---
+title: WireGuard
+---
+
+### Adding a WireGuard Configuration to Rethink DNS + Firewall + VPN App
 
 This guide will walk you through the steps to add a WireGuard configuration to the Rethink DNS + Firewall + VPN app.
 
