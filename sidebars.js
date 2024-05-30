@@ -11,6 +11,11 @@ module.exports = {
       label: 'Firewall',
       items: ['firewall/introduction', 'firewall/orbot'],
     },
+    {
+      type: 'category',
+      label: 'Proxy',
+      items: ['proxy/wireguard'],
+    },
   ],
   someSidebar: {
     // Features: ['mdx'],
