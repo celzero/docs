@@ -2,11 +2,11 @@
 title: Open Source
 ---
 
-The free and open source RethinkDNS Resolver is serverless and supports protocols: DNS over HTTPS (DoH) & DNS over TLS (DoT). It can be configured with custom blocklists. And can be hosted on cloudflare, fly.io or deno-deploy. Source code is made available at [github.com/serverless-dns/serverless-dns](https://github.com/serverless-dns/serverless-dns).
+The free and open source Rethink**DNS** Resolver is serverless and supports protocols DNS over HTTPS (DoH) & DNS over TLS (DoT). It can be configured with custom blocklists, and it can be hosted on Cloudflare, fly.io or Deno Deploy. Source code is made available at [github.com/serverless-dns/serverless-dns](https://github.com/serverless-dns/serverless-dns).
 
 ## Hosting your own DNS Resolver {#hosting}
 
-This serverless DNS can be hosted to three platforms: Cloudflare, Deno-Deploy and Fly.io. Easiest way would be to use Cloudflare. The below table summarizes the platforms available.
+This serverless DNS can be hosted to three platforms: Cloudflare, Deno-Deploy and Fly.io. The easiest way would be to use Cloudflare. The below table summarizes the platforms available.
 
 | Platform      | Difficulty | Resolver Protocol | Instructions                      |
 | ------------- | ---------- | ----------------- | --------------------------------- |
@@ -16,27 +16,27 @@ This serverless DNS can be hosted to three platforms: Cloudflare, Deno-Deploy an
 
 ### Using Cloudflare {#cloudflare}
 
-Rethink serverless can be hosted to cloudflare. User will be liable for cloudflare billing. Click the button below to deploy.
+Rethink serverless can be hosted to Cloudflare. Users will be liable for Cloudflare billing. Click the button below to deploy.
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/serverless-dns/serverless-dns/)
 
 - Configure
-	- Once the hosting is successful, lets consider rethink serverless dns is hosted
+	- Once the hosting is successful, let's consider Rethink serverless DNS is hosted
 		to `example.com`.
-	- To configure your dns level blocking visit to `example.com/configure` which
+	- To configure your DNS level blocking visit to `example.com/configure` which
 		will take to configuration page, which currently contains 191 blocklists with
 		~13.5 Million blockable domains in category like notracking, dating, gambling,
 		privacy, porn, cryptojacking, security ...
 	- Navigate through and select your blocklists.
 	- Once selected you can find your domain name `example.com` followed by
 		configuration token on screen like this `https://example.com/1:AIAA7g==` copy
-		it and add to your dns DOH client.
-	- Now your own trusted dns resolver with custom blocking is up and running.
+		it and add to your DNS DOH client.
+	- Now your own trusted DNS resolver with custom blocking is up and running.
 
 
 - Change Resolver
-	- By default dns request are resolved by cloudflare `cloudflare-dns.com`.
-	- To change resolver login to your cloudflare dash board
+	- By default, DNS requests are resolved by Cloudflare's `cloudflare-dns.com`.
+	- To change resolver logins to your Cloudflare dashboard:
 		- click on `worker`
 		- click on `serverless-dns` worker
 		- click on `Settings` tab
@@ -48,9 +48,9 @@ Rethink serverless can be hosted to cloudflare. User will be liable for cloudfla
 
 
 
-### Using Deno-Deploy {#deno-deploy}
+### Using Deno Deploy {#deno-deploy}
 
-This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and supports DoH only. User will be liable for deno.com billing.
+This project can be hosted on [deno.com/deploy) and supports DoH only. Users will be liable for deno.com billing.
 
 1. Fork the [serverless-dns repository](https://github.com/serverless-dns/serverless-dns) (requires a GitHub account).
 2. In the repository you just forked, click on the _Actions_ tab and _Confirm_ that you want to use _Actions_, if prompted.
@@ -64,11 +64,11 @@ This project can be hosted on [deno.com/deploy](https://deno.com/deploy) and sup
 
 ### Using Fly.io {#fly-io}
 
-This project can be hosted on [fly.io](https://fly.io), and can support both DoT and DoH protocols. User will be liable for fly.io billing.
+This project can be hosted on [fly.io](https://fly.io), and can support both DoT and DoH protocols. Users will be liable for fly.io billing.
 
 1. Install `flyctl` on your device ([ref](https://fly.io/docs/getting-started/installing-flyctl/)).
 2. Signup and/or login to fly.io ([ref](https://fly.io/docs/getting-started/login-to-fly/)).
-3. Create an empty directory anywhere on your PC. Open you terminal or powershell and navigate to this directory.
+3. Create an empty directory anywhere on your PC. Open your terminal or PowerShell and navigate to this directory.
 4. Launch a fly app
 	```bash
 	flyctl launch
@@ -88,7 +88,7 @@ This project can be hosted on [fly.io](https://fly.io), and can support both DoT
 	B64NOWRAP_KEY="$(base64 -w0 "$KEY")"
 	B64NOWRAP_CRT="$(base64 -w0 "$CRT")"
 	```
-7. As described in [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file, this base64 encoded certificate-key pair need to set as a single environment variable called `TLS_`. Within this variable, the certificate and key encodings needs to be separated by a newline (`\n`) and described by `CRT=` and `KEY=`. On a bash terminal this can be done by following steps continued by by above.
+7. As described in [`.env.example`](https://github.com/serverless-dns/serverless-dns/blob/main/.env.example) file, this base64 encoded certificate-key pair need to set as a single environment variable called `TLS_`. Within this variable, the certificate and key encodings needs to be separated by a newline (`\n`) and described by `CRT=` and `KEY=`. On a bash terminal, this can be done by following steps continued by by above.
 	```bash
 	# This creates a single file called "FLY_TLS" in the current directory
 	echo "KEY=$B64NOWRAP_KEY" > FLY_TLS
